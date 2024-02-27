@@ -1,0 +1,20 @@
+:root {
+    --primary-color: #1F4023;
+}
+
+body {
+    font-family: Arial;
+}
+
+.shortcut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 12.5px;
+    width: 225px;
+    text-align: left;
+}
+
