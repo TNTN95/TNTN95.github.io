@@ -1,5 +1,5 @@
 :root {
-    --primary: #1F4023;
+    --primary: #156D1F;
     --primary-dark: #142B17;
     --secondary: #CE7B2E;
     --secondary-dark: #995b22;
@@ -72,9 +72,16 @@ button:hover{
 }
 
 .shortcut {
-    display: flex;
+    display: inline-flex;
     text-align: left;
-    width: 225px;
+    width: 300px;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 460px) {
+   .shortcut {
+    width: 100%;
+   }
 }
 
 .button {
@@ -93,6 +100,7 @@ button:hover{
 
 .button-light {
     background-color: var(--background);
+    color: var(--black);
     border: 2px solid var(--primary);
 }
 
@@ -219,11 +227,20 @@ form{
   
   /* Login (Also uses sign-up form classes) */
   
+  .login-btn span{
+    font-size: 35px;
+  }
+
+  #login-btn span {
+    color: var(--primary);
+  }
+  
   .login-popup {
     display: none;
     position: fixed;
     top: 70px;
-    right: 440px;
+    right: 0;
+    width: 440px;
   }
   
   .popup-content {
@@ -232,6 +249,18 @@ form{
     margin-top: 0px;
   }
   
+  @media screen and (max-width: 460px) {
+    .popup-content{
+        width: 100%;
+    }
+
+    .login-popup{
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+    }
+}
+
   .close{
     font-size: 25px;
     font-weight: bold;
@@ -239,7 +268,7 @@ form{
     background-color: var(--background);
     height: 25px;
     width: 25px;
-    margin-left: 375px;
+    right: 0px;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -258,7 +287,7 @@ form{
 }
   
 .logo-text{
-    color:white;
+    color: var(--primary);
     display: inline-block;
     margin: 0px;
     padding: 0px;
@@ -268,7 +297,7 @@ form{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary);
+    background-color: var(--white);
     height: 70px;
     width: 100%;
     position: fixed;
@@ -278,7 +307,7 @@ form{
 }
 
 .navbar a {
-    color: var(--white);
+    color: var(--black);
     font-size: 20px;
     padding: 20px 15px;
     transition: box-shadow 0.2s;
@@ -302,7 +331,7 @@ form{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--primary);
+    background-color: var(--white);
     z-index: 1;
     width: 100%;
     margin-top: 0;
@@ -325,6 +354,10 @@ path {
 
 .mobile-menu{
     display: none;
+}
+
+.mobile-menu a{
+    color: var(--primary);
 }
 
 .mobile-menu a:hover{
@@ -386,6 +419,9 @@ path {
     .mobile-menu {
       display: block;
     }
+    #login-btn {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -402,48 +438,68 @@ path {
     margin: 0 auto;
 }
 
-.index-headline-container {
+.headline-container {
+    background: url(images/index-image.png);
+    background-color: lightgrey 50%;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 100%;
+    height: 750px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
+    vertical-align: middle;
+    margin-top: 70px;
 }
 
 .headline-text {
-    display: block;
-    flex-grow: 1;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.headline-text h2{
+    margin-left: 20%;
+    position: relative;
     display: block;
 }
-
-.headline-text span {
-    color: var(--secondary);
-}
-
 
 .headline-image {
-    background: url(images/desk-computer.webp);
-    background-color: lightgrey 50%;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 561px;
-    height: 460px;
+    display: none;
+    background: url(images/co-space2.png) no-repeat;
+    background-size: 100%;
+    width: 700px;
+    height: 500px;
+    margin: 35px 30px;
+}
+
+@media (max-width: 1400px) {
+    .headline-container {
+        background: none;
+        height: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .headline-text {
+        margin-left: 0;
+    }
+
+    #index-desktop {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 480px) {
     .headline-text h2 {
         font-size: 22px;
+        text-align: center;
     }
 
     .headline-image {
-        height: 300px;
+        height: 200px;
+        margin: 0;
+    }
+
+    #index-mobile {
+        display: inline-block;
+    }
+
+    #index-desktop {
+        display: none;
     }
 }
 
@@ -456,6 +512,10 @@ path {
     width: 800px;
     height: 600px;
     margin: auto;
+}
+
+.slideshow-container a:hover {
+    text-decoration: none;
 }
 
 .slideshow {
@@ -569,7 +629,7 @@ path {
 }
 
 .contact-text a:hover{
-    text-decoration: underline var(--secondary);
+    text-decoration: underline var(--primary);
 }
 
 .mobile-image{
@@ -663,7 +723,7 @@ path {
 
 @media (max-width: 460px) {
     .contact-form, .image-textbox{
-        width: 75vw;
+        width: 100vw;
     }
 
     .image-textbox{
@@ -671,8 +731,7 @@ path {
     }
 
     .image-text-container{
-        width: 100%;
-        height: 100vh;
+        height: 400px;
     }
 
     #index-textbox {
@@ -681,6 +740,42 @@ path {
 
     #index-textbox .image-textbox {
         width: 70%;
+    }
+}
+
+.location-container {
+    margin: 30px 0;
+}
+
+.location-container button {
+    margin: 10px 0;
+}
+
+.location-container a:hover {
+    text-decoration: underline var(--white);
+}
+
+.transport-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.transport-item {
+    margin: 0 50px;
+    max-width: 350px;
+    min-width: 200px;
+}
+
+.transport-container .image-text-container{
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 460px) {
+    .transport-item {
+        width: 95%;
+        margin: 0;
     }
 }
 
@@ -742,7 +837,7 @@ path {
     height: 150px;
     width: 100vw;
     margin-top: 50px;
-    background-color: var(--primary);
+    background-color: var(--white);
 }
 
 

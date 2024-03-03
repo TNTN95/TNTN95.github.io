@@ -9,22 +9,23 @@
 		<div class="navbar">
 			<div> 
 				<a id="logo-link" href="index.html">
-                    <img class="usn-logo" src="images/USN-symbol_hvit.png">
+                    <img class="usn-logo" src="images/USN-logo-green.png">
                     <h2 class="logo-text">START</h1>
                 </a>
 			</div>
 			<div class="main">
 				<div class="with-dropdown">
-					<a href="aboutUs.html">About USNStart <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="#FFFFFF" stroke-width="3"/></svg></a>
+					<a href="aboutUs.html">About USNStart <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="var(--primary)" stroke-width="3"/></svg></a>
 					<div class="dropdown-content">
 						<a href="aboutUs.html#our-space">Our Co-working Space</a>
 						<a href="aboutUs.html#floor-plan">Floor Plan</a>
+						<a href="aboutUs.html#location">Location</a>
 						<a href="aboutUs.html#about-us">About Us</a>
 						<a href="aboutUs.html#privacy-and-security">Privacy and Security</a>
 					</div>
 				</div>
 				<div class="with-dropdown">
-					<a href="membership.html">Membership <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="#FFFFFF" stroke-width="3"/></svg></a>
+					<a href="membership.html">Membership <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="var(--primary)" stroke-width="3"/></svg></a>
 					<div class="dropdown-content">
 						<a href="membership.html#member-options">Membership Options</a>
 						<a href="membership.html#book-a-space">Book a Space</a>
@@ -33,14 +34,16 @@
 					</div>
 				</div>
 				<div class="with-dropdown">
-					<a href="contact.html">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="#FFFFFF" stroke-width="3"/></svg></a>
+					<a href="contact.html">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="var(--primary)" stroke-width="3"/></svg></a>
 					<div class="dropdown-content">
 						<a href="contact.html">Contact Information</a>
 						<a href="contact.html#contact-form">Contact Form</a>
 						<a href="#">Leave a Review</a>
 					</div>
 				</div>
-				<a href="#" id="login-btn" class="login-btn">&#9094; Login</a>
+			</div>
+			<div>
+				<a href="#" id="login-btn" class="login-btn"><span>&#9094;</span> Login</a>
 			</div>
 			<div class="mobile-menu">
 				<a class="mobile-menu-button" href="#">&#9776;</a>
@@ -48,10 +51,11 @@
 		</div>
 		<div class="mobile-menu-overlay" id="mobile-menu-overlay">
 			<div class="mobile-menu-content">
-				<!--<button id="login-btn" class="login-btn button">&#9094; Login</button>-->
+				<a href="#" id="login-btn-mobile" class="login-btn"><span>&#9094;</span> Login</a>
 				<a href="aboutUs.html"><h3>About Us</h3></a>
 				<a href="aboutUs.html#our-space">Our Co-working Space</a>
 				<a href="aboutUs.html#floor-plan">Floor Plan</a>
+				<a href="aboutUs.html#location">Location</a>
 				<a href="aboutUs.html#about-us">About Us</a>
 				<a href="aboutUs.html#privacy-and-security">Privacy and Security</a>
 				<a href="membership.html"><h3>Membership</h3></a>
@@ -66,7 +70,110 @@
 			</div>
 		</div>
 		<div class="content">
-
+			<div id="our-space">
+				<h2>Our Co-working Space</h2>
+				<div class="slideshow-container">
+					<div class="slideshow">
+					<div class="slide fade">
+						<img src="images/co-space1.png" alt="Image 1">
+					</div>
+					<div class="slide fade">
+						<img src="images/co-space2.png" alt="Image 2">
+					</div>
+					<div class="slide fade">
+						<img src="images/co-space3.png" alt="Image 3">
+					</div>
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<div class="dots">
+					<span class="dot" onclick="currentSlide(1)"></span> 
+					<span class="dot" onclick="currentSlide(2)"></span> 
+					<span class="dot" onclick="currentSlide(3)"></span> 
+					</div>
+				</div>
+				<div>
+					<p><span class="bold">Open Workspace:</span> This is the heart of a coworking space, featuring flexible seating arrangements with communal desks, tables, and chairs. It's suitable for individual work, informal meetings, and collaborative projects. There are space for 60 individual working here.</p>
+					<p><span class="bold">Private offices:</span> Small, fully-furnished offices that can accommodate individuals or small teams, offering more privacy and a dedicated workspace. The total capacities are 6 private offices.</p>	
+					<p><span class="bold">Meeting rooms:</span> Various-sized meeting rooms equipped with projectors and whiteboards for presentations, client meetings, or team discussions. There are 5 meeting rooms in total</p>
+					<p><span class="bold">Lounge Area:</span> Comfortable seating areas, often with sofas and coffee tables, providing a relaxed atmosphere for informal meetings or relaxation.</p>
+					<p><span class="bold">Kitchen and Dining Area:</span> A well-equipped kitchen or kitchenette with facilities for preparing meals and dining. It also offer complimentary coffee, tea, and snacks.</p>
+					<p><span class="bold">Printing and Scanning area:</span> Equipment for printing, scanning, and photocopying documents.</p>
+					<p><span class="bold">Game room:</span> A recreational space with games like billiard, ping-pong, or video games, encouraging breaks and social interaction.</p>
+					<p><span class="bold">Parking:</span>There are also a plenty of parking places. <a href="#location">Read more about the location here.</a></p>
+				</div>
+			</div>
+			<div id="floor-plan">
+				<h2>Check out the floor plan</h2>
+				<img id="floor-plan" src="images/floor-plan.jpg">
+			</div>
+			<div class="location-container" id="location">
+				<div class="transport-container">
+					<div class="transport-item">
+						<h2>Our Location</h2>
+						<p>USN Start's co-working space is situated on USN Campus Bø.</p>
+						<p>Campus Bø can be found in a central part of Telemark, in between Oslo and Kristiansand. Bø has great public transport connections, including busses and trains. It takes less than 10 minutes on foot from the bus- and trainstation.</p>
+						<h3>Address:</h3>
+						<p>Gullbringvegen 36<br>3800 Bø i Telemark</p>
+					</div>	
+					<div class="image-text-container">
+						<div class="image-textbox">
+							<p class="bold">
+								Accessibility is a key element to our service. Let us know if we can assist you in any way!
+							</p>
+						</div>
+					</div>
+				</div>
+				<iframe allowfullscreen="" frameborder="0" height="500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.447327084587!2d9.057383216329706!3d59.40893278168667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46474937ae91b7df%3A0xd599b79b8eb4e320!2zVW5pdmVyc2l0ZXRldCBpIFPDuHLDuHN0LU5vcmdlLCBCw7g!5e0!3m2!1sno!2sno!4v1580385997182!5m2!1sno!2sno" style="border:0;" width="100%"></iframe>
+				<div class="transport-container">
+					<div class="transport-item">
+						<h3>Train</h3>
+						<p>Bø is situated along Sørlandsbanen, with only two hours in travel time to Oslo, and two and a half hours to Kristiansand. The closest station is Bø Stasjon.</p>
+						<a href="https://www.vy.no/">
+							<button class="shortcut button-dark btn-sec-dark">
+								<span>Vy</span>
+								<span class="arrow white-arrow"></span>
+							</button>
+						</a>
+						<a href="https://go-aheadnordic.no/">
+							<button class="shortcut button-dark btn-sec-dark">
+								<span>GoAhead</span>
+								<span class="arrow white-arrow"></span>
+							</button>
+						</a>
+					</div>
+					<div class="transport-item">
+						<h3>Buss</h2>
+						<p>There are also plenty of options for busses. Check out the following offers on their respective sites:
+						</p>
+						<a href="https://www.nor-way.no/destinasjoner/ekspressbuss-til-seljord/">
+							<button class="shortcut button-dark btn-sec-dark">
+								<span>Nor-Way</span>
+								<span class="arrow white-arrow"></span>
+							</button>
+						</a>
+						<a href="https://entur.no/?gclid=CjwKCAjw7MzkBRAGEiwAkOXexMjiyh3xF8ggJMufGIBam55WX7HzKNcdxNDjUYuQqu1fwmhcWMjmShoCBAEQAvD_BwE">
+							<button class="shortcut button-dark btn-sec-dark">
+								<span>Entur</span>
+								<span class="arrow white-arrow"></span>
+							</button>
+						</a>
+						<a href="https://www.farte.no/">
+							<button class="shortcut button-dark btn-sec-dark">
+								<span>Farte</span>
+								<span class="arrow white-arrow"></span>
+							</button>
+						</a>
+					</div>
+					<div class="transport-item">
+						<h3>Car and parking options</h3>
+						<p>There are plenty of parking space on the campus. It is also possible to use the parking spaces by Bø Hotell, which is close by.</p>
+						<p>There are some charging stations for electric cars, but not many, so we incourage users to only charge when needed.</p>
+					</div>
+				</div>
+			</div>
+			<h2>About USN Start</h2>
+			<h2>Privacy and Security Policy</h2>
 
             
         </div>
@@ -88,5 +195,6 @@
 			</div>
 		  </div>
 		<script src="script.js"></script>
+		<script src="slides.js"></script>
 	</body>
 </html>
