@@ -9,22 +9,23 @@
 		<div class="navbar">
 			<div> 
 				<a id="logo-link" href="index.html">
-                    <img class="usn-logo" src="images/USN-symbol_hvit.png">
+                    <img class="usn-logo" src="images/USN-logo-green.png">
                     <h2 class="logo-text">START</h1>
                 </a>
 			</div>
 			<div class="main">
 				<div class="with-dropdown">
-					<a href="aboutUs.html">About USNStart <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="#FFFFFF" stroke-width="3"/></svg></a>
+					<a href="aboutUs.html">About USNStart <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="var(--primary)" stroke-width="3"/></svg></a>
 					<div class="dropdown-content">
 						<a href="aboutUs.html#our-space">Our Co-working Space</a>
 						<a href="aboutUs.html#floor-plan">Floor Plan</a>
+						<a href="aboutUs.html#location">Location</a>
 						<a href="aboutUs.html#about-us">About Us</a>
 						<a href="aboutUs.html#privacy-and-security">Privacy and Security</a>
 					</div>
 				</div>
 				<div class="with-dropdown">
-					<a href="membership.html">Membership <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="#FFFFFF" stroke-width="3"/></svg></a>
+					<a href="membership.html">Membership <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="var(--primary)" stroke-width="3"/></svg></a>
 					<div class="dropdown-content">
 						<a href="membership.html#member-options">Membership Options</a>
 						<a href="membership.html#book-a-space">Book a Space</a>
@@ -33,14 +34,16 @@
 					</div>
 				</div>
 				<div class="with-dropdown">
-					<a href="contact.html">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="#FFFFFF" stroke-width="3"/></svg></a>
+					<a href="contact.html">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none"><path d="M15 1.5L8.5 7.5L2 1.5" stroke="var(--primary)" stroke-width="3"/></svg></a>
 					<div class="dropdown-content">
 						<a href="contact.html">Contact Information</a>
 						<a href="contact.html#contact-form">Contact Form</a>
 						<a href="#">Leave a Review</a>
 					</div>
 				</div>
-				<a href="#" id="login-btn" class="login-btn">&#9094; Login</a>
+			</div>
+			<div>
+				<a href="#" id="login-btn" class="login-btn"><span>&#9094;</span> Login</a>
 			</div>
 			<div class="mobile-menu">
 				<a class="mobile-menu-button" href="#">&#9776;</a>
@@ -48,10 +51,11 @@
 		</div>
 		<div class="mobile-menu-overlay" id="mobile-menu-overlay">
 			<div class="mobile-menu-content">
-				<!--<button id="login-btn" class="login-btn button">&#9094; Login</button>-->
+				<a href="#" id="login-btn-mobile" class="login-btn"><span>&#9094;</span> Login</a>
 				<a href="aboutUs.html"><h3>About Us</h3></a>
 				<a href="aboutUs.html#our-space">Our Co-working Space</a>
 				<a href="aboutUs.html#floor-plan">Floor Plan</a>
+				<a href="aboutUs.html#location">Location</a>
 				<a href="aboutUs.html#about-us">About Us</a>
 				<a href="aboutUs.html#privacy-and-security">Privacy and Security</a>
 				<a href="membership.html"><h3>Membership</h3></a>
@@ -65,101 +69,122 @@
 				<a href="#">Leave a Review</a>
 			</div>
 		</div>
-		<div class="content">
-			<div class="index-headline-container">
-				<div class="headline-text">
-					<h2>Welcome to USNStart!<br>Where creativity flourishes, <br><span>collaboration thrives</span><br> and success is built together.</h2>
-				</div>
-				<div class="headline-image">
-					<button class="button button-dark btn-sec-dark">Book your space now!</button>
-				</div>
+		<div class="headline-container">
+			<div class="headline-image" id="index-mobile"></div>
+			<div class="headline-text">
+				<h2>Creativity<br>Collaboration<br>Success</h2>
+				<button class="shortcut button-dark">
+					<span>Book your space now</span>
+					<span class="arrow white-arrow"></span>
+				</button>
+				<br>
+				<button class="shortcut button-dark">
+					<span>Explore our space</span>
+					<span class="arrow white-arrow"></span>
+				</button>
+				<br>
+				<button class="shortcut button-dark">
+					<span>Contact Us</span>
+					<span class="arrow white-arrow"></span>
+				</button>
+				<br>
+				<button class="shortcut button-light">
+					<span>Membership Options</span>
+					<span class="arrow dark-arrow"></span>
+				</button>
+				<br>
+				<button class="shortcut button-light">
+					<span>Meet our tenants</span>
+					<span class="arrow dark-arrow"></span>
+				</button>
 			</div>
-			<div class="slideshow-container">
-				<div class="slideshow">
-				  <div class="slide fade">
+			<div class="headline-image" id="index-desktop"></div>
+		</div>
+		<div class="slideshow-container">
+			<div class="slideshow">
+				<div class="slide fade">
 					<img src="images/co-space1.png" alt="Image 1">
-				  </div>
-				  <div class="slide fade">
+				</div>
+				<div class="slide fade">
 					<img src="images/co-space2.png" alt="Image 2">
-				  </div>
-				  <div class="slide fade">
+				</div>
+				<div class="slide fade">
 					<img src="images/co-space3.png" alt="Image 3">
-				  </div>
-				</div>
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-				<div class="dots">
-				  <span class="dot" onclick="currentSlide(1)"></span> 
-				  <span class="dot" onclick="currentSlide(2)"></span> 
-				  <span class="dot" onclick="currentSlide(3)"></span> 
 				</div>
 			</div>
-			<div class="item-container">
-				<div class="image-textbox">
-					<h3 class="text-secondary bold">Who are we?</h3>
-					<p class="bold">
-						USNStart is a modern co-working facility situated in the main building of USN Bø Campus. 
-					</p>
-					<p>
-						The facility offers an expansive 500-square-meter collaborative environment segmented into distinct zones.
-					</p>
-				</div>
-				<div class="image-textbox" id="our-offer">
-					<h3 class="text-secondary bold">What can we offer you?</h3>
-					<ul class="bold">
-						<li>Open Workspace</li>
-						<li>Private offices</li>
-						<li>Private offices</li>
-						<li>Meeting rooms</li>
-						<li>Lounge Area</li>
-						<li>Game room</li>
-						<li>Kitchen and Dining Area</li>
-						<li>Printing and Scanning area</li>
-					</ul>
-				</div>
-				<img class="index-image" src="images/co-space2.png">
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<div class="dots">
+				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+				<span class="dot" onclick="currentSlide(3)"></span> 
 			</div>
-			<div class="member-options-container">
-				<div id="pass" class="member-container">
-				  <div class="member-item">
+		</div>
+		<div class="item-container">
+			<div class="image-textbox">
+				<h3 class="text-secondary bold">Who are we?</h3>
+				<p class="bold">
+					USNStart is a modern co-working facility situated in the main building of USN Bø Campus. 
+				</p>
+				<p>
+					The facility offers an expansive 500-square-meter collaborative environment segmented into distinct zones.
+				</p>
+			</div>
+			<div class="image-textbox" id="our-offer">
+				<h3 class="text-secondary bold">What can we offer you?</h3>
+				<ul class="bold">
+					<li>Open Workspace</li>
+					<li>Private offices</li>
+					<li>Private offices</li>
+					<li>Meeting rooms</li>
+					<li>Lounge Area</li>
+					<li>Game room</li>
+					<li>Kitchen and Dining Area</li>
+					<li>Printing and Scanning area</li>
+				</ul>
+			</div>
+			<img class="index-image" src="images/co-space2.png">
+		</div>
+		<div class="member-options-container">
+			<div id="pass" class="member-container">
+				<div class="member-item">
 					<h3>Day Pass</h3>
 					<p class="member-desc">Enjoy one-day access to the space</p>
 					<img src="images/co-space1.png" class="member-image">
 					<p class="bold">NOK 699,-</p>
 					<button class="button button-dark btn-sec-dark btn-center">Book a space</button>
-				  </div>
-				  <div class="member-item">
+				</div>
+				<div class="member-item">
 					<h3>Monthly Pass</h3>
 					<p class="member-desc">Unlimited access available for a monthly charge</p>
 					<img src="images/co-space2.png" class="member-image">
 					<p class="bold">NOK 6000,-</p>
 					<button class="button button-dark btn-sec-dark btn-center">Book a space</button>
-				  </div>
-				  <div class="member-item">
+				</div>
+				<div class="member-item">
 					<h3>Student Pass</h3>
 					<p class="member-desc">Avail a semester-long membership</p>
 					<img src="images/co-space3.png" class="member-image">
 					<p class="bold">NOK 9 000,-</p>
 					<button class="button button-dark btn-sec-dark btn-center">Book a space</button>
-				  </div>
 				</div>
-				<div id="desk" class="member-container">
-				  <div class="member-item">
+			</div>
+			<div id="desk" class="member-container">
+				<div class="member-item">
 					<h3>Annual Reserved Desk</h3>
 					<p class="member-desc">Unlimited access available for a monthly charge</p>
 					<img src="images/co-space1.png" class="member-image">
 					<p class="bold">NOK 50 000,- / year</p>
 					<button class="button button-dark btn-sec-dark btn-center">Book a space</button>
-				  </div>
-				  <div class="member-item">
+				</div>
+				<div class="member-item">
 					<h3>Private Office Desk</h3>
 					<p class="member-desc">Unlimited access available for a monthly charge</p>
 					<img src="images/co-space2.png" class="member-image">
 					<p class="bold">NOK 20 000,- / month</p>
 					<button class="button button-dark btn-sec-dark btn-center">Book a space</button>
-				  </div>
 				</div>
-			  </div>
+			</div>
 		</div>
 		<div class="login-popup" id="loginPopup">
 			<div class="popup-content"> 

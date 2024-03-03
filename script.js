@@ -3,6 +3,10 @@
         document.getElementById('loginPopup').style.display = 'block';
     });
 
+    document.getElementById('login-btn-mobile').addEventListener('click', function() {
+      document.getElementById('loginPopup').style.display = 'block';
+  });
+
     document.getElementById('closeBtn').addEventListener('click', function() {
       document.getElementById('loginPopup').style.display = 'none';
     });
