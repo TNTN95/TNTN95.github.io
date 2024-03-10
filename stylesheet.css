@@ -4,6 +4,7 @@
     --secondary: #CE7B2E;
     --secondary-dark: #995b22;
     --background: #E7E3DD;
+    --background-opacity: #e7e3ddd7;
     --white: #FFFFFF;
     --black: #000000;
     --confirm: #4CEF00;    
@@ -430,76 +431,94 @@ path {
     }
 }
 
-/* Keeps content below navbar */
+/* Footer */
 
-.content {
-    padding-top: 70px;
-    width: 90%;
-    margin: 0 auto;
+.footer {
+    height: 150px;
+    width: 100vw;
+    margin-top: 50px;
+    background-color: var(--white);
 }
 
-.headline-container {
-    background: url(images/index-image.png);
-    background-color: lightgrey 50%;
-    background-size: 1000px;
-    background-repeat: no-repeat;
-    background-position: right top;
-    width: 100%;
-    height: 750px;
-    display: flex;
-    vertical-align: middle;
-    margin-top: 70px;
-}
 
-.headline-text {
-    margin-left: 20%;
-    position: relative;
-    display: block;
-}
 
-.headline-image {
-    display: none;
-    background: url(images/co-space2.png) no-repeat;
-    background-size: 100%;
-    width: 700px;
-    height: 500px;
-    margin: 35px 30px;
-}
+/* Hidden info-container */
 
-@media (max-width: 1400px) {
-    .headline-container {
-        background: none;
-        height: 100%;
-        justify-content: space-evenly;
+    .info-box-container {
+        display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
+        width: 70%;
+        margin: auto;
     }
 
-    .headline-text {
-        margin-left: 0;
+    .info-box{
+        width: 225px;
     }
 
-    #index-desktop {
-        display: inline-block;
+    .info-box .shortcut{
+        width: 225px;
+        height: 50px;
     }
+
+    #nr1, #nr2, #nr3, #nr4, #nr5, #nr6, #nr7, #nr8  {
+        display: none;
+    }
+
+    @media screen and (max-width: 1500px) {
+        .info-box-container {
+            width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .info-box-container {
+            width: 100%;
+        }
+    }
+
+
+/* Image overlay with one or two text boxes */
+
+.image-overlay {
+    background-image: url("images/co-space2.png");
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
-    .headline-text h2 {
-        font-size: 22px;
-        text-align: center;
-    }
+.overlay-textbox {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: var(--background);
+    width: 400px;
+    padding: 30px;
+    margin: 0 50px;
+    background-color: var(--background-opacity);
+}
 
-    .headline-image {
-        height: 200px;
+.overlay-mobile-img {
+    display: none;
+    background-image: url("images/co-space2.png");
+    width: 100%;
+    height: 400px;
+}
+
+@media (max-width: 460px) {
+    .overlay-textbox {
+        width: 100vw;
         margin: 0;
+        padding: 10px;
     }
 
-    #index-mobile {
-        display: inline-block;
-    }
-
-    #index-desktop {
-        display: none;
+    .overlay-mobile-img {
+        display: block;
+        background-size: cover;
     }
 }
 
@@ -536,6 +555,26 @@ path {
     height: 100%;
     object-fit: cover;
 }
+
+.autoSlider {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin-bottom: 50px;
+  }
+  
+  .autoSlides img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 800px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .autoSlides img.active {
+    opacity: 1;
+  }
 
 @media (max-width: 840px) {
     .slideshow-container {
@@ -604,6 +643,132 @@ path {
   .active {
     background-color: #3b3b3b;
 }
+
+/* Keeps content below navbar */
+
+.content {
+    padding-top: 70px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* Index specific */
+
+.headline-text {
+    background-color: var(--background);
+    border: solid 2px var(--primary);
+    z-index: 100;
+    margin: 120px 20%;
+    position: absolute;
+    display: block;
+    padding: 30px;
+}
+
+.headline-text h2 {
+    margin-top: 0px;
+}
+
+
+
+/* About us specific */
+
+.location-container {
+    margin: 30px 0;
+}
+
+.location-container button {
+    margin: 10px 0;
+}
+
+.location-container a:hover {
+    text-decoration: underline var(--white);
+}
+
+.transport-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.transport-item {
+    margin: 0 50px;
+    max-width: 350px;
+    min-width: 200px;
+}
+
+.transport-container .image-text-container{
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 460px) {
+    .transport-item {
+        width: 95%;
+        margin: 0;
+    }
+}
+
+
+
+/*Membership specific */
+
+/* Membership Options */
+
+.member-options-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .member-container {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 460px) {
+    .member-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+  
+  #pass{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  #desk{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .member-item {
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+  }
+  
+  .member-item h3 {
+    text-align: center;
+  }
+  
+  .member-item p{
+    margin-bottom: 5px;
+  }
+  
+  .member-image {
+    display: block;
+    object-fit: cover;  
+    width: 100%;
+    max-height: 100px;
+    margin: 0 auto;
+  }
+
+
+
+/* Contact page specific only */
 
 .contact-info-container{
     background-image: url("images/co-space2.png");
@@ -684,41 +849,9 @@ path {
     height: 100px;
 }
 
-.image-text-container {
-    width: 500px;
-    height: 800px;
-    background-image: url("images/co-space3.png");
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-textbox {
-    position: relative;
-    text-align: center;
+.item-container .image-overlay {
     width: 50%;
-    max-width: 450px;
-    background-color: var(--background);
-    color: var(--primary);
-    opacity: 90%;
-    padding: 20px;
-    border: solid 2px var(--primary);
-    margin: 20px;
-}
-
-.image-textbox ul {
-    text-align: left;
-}
-
-.image-textbox li {
-    margin: 5px;
-}
-
-.index-image {
-    object-fit: cover;
-    width: 90%;
-    height: 100vh;
+    min-width: 600px;
 }
 
 @media (max-width: 460px) {
@@ -741,104 +874,8 @@ path {
     #index-textbox .image-textbox {
         width: 70%;
     }
-}
 
-.location-container {
-    margin: 30px 0;
-}
-
-.location-container button {
-    margin: 10px 0;
-}
-
-.location-container a:hover {
-    text-decoration: underline var(--white);
-}
-
-.transport-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.transport-item {
-    margin: 0 50px;
-    max-width: 350px;
-    min-width: 200px;
-}
-
-.transport-container .image-text-container{
-    height: 600px;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 460px) {
-    .transport-item {
-        width: 95%;
-        margin: 0;
+    .item-container .image-overlay {
+        min-width: 100%
     }
 }
-
-/* Membership Options */
-
-.member-options-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .member-container {
-    display: grid;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  @media (max-width: 460px) {
-    .member-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    }
-  
-  #pass{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  #desk{
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .member-item {
-    background-color: var(--background);
-    padding: 10px;
-    border-radius: 3px;
-    box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
-  }
-  
-  .member-item h3 {
-    text-align: center;
-  }
-  
-  .member-item p{
-    margin-bottom: 5px;
-  }
-  
-  .member-image {
-    display: block;
-    object-fit: cover;  
-    width: 100%;
-    max-height: 100px;
-    margin: 0 auto;
-  }
-
-/* Footer */
-
-.footer {
-    height: 150px;
-    width: 100vw;
-    margin-top: 50px;
-    background-color: var(--white);
-}
-
-
-

@@ -28,3 +28,9 @@
       let overlay = document.getElementById('mobile-menu-overlay');
         overlay.style.display = 'none';
     });
+
+    function hiddenBox(id) {
+      let textbox = document.getElementById('nr'+id);
+      let isTextboxVisible = textbox.style.display === "block";
+      textbox.style.display = isTextboxVisible ? "none" : "block";
+    }

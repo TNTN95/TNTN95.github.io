@@ -69,8 +69,7 @@
 				<a href="#">Leave a Review</a>
 			</div>
 		</div>
-		<div class="headline-container">
-			<div class="headline-image" id="index-mobile"></div>
+		<div class="autoSlider">
 			<div class="headline-text">
 				<h2>Creativity<br>Collaboration<br>Success</h2>
 				<button class="shortcut button-dark">
@@ -98,30 +97,14 @@
 					<span class="arrow dark-arrow"></span>
 				</button>
 			</div>
-			<div class="headline-image" id="index-desktop"></div>
-		</div>
-		<div class="slideshow-container">
-			<div class="slideshow">
-				<div class="slide fade">
-					<img src="images/co-space1.png" alt="Image 1">
-				</div>
-				<div class="slide fade">
-					<img src="images/co-space2.png" alt="Image 2">
-				</div>
-				<div class="slide fade">
-					<img src="images/co-space3.png" alt="Image 3">
-				</div>
-			</div>
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			<div class="dots">
-				<span class="dot" onclick="currentSlide(1)"></span> 
-				<span class="dot" onclick="currentSlide(2)"></span> 
-				<span class="dot" onclick="currentSlide(3)"></span> 
+			<div class="autoSlides">
+			  <img src="images/co-space1.png">
+			  <img src="images/co-space2.png">
+			  <img src="images/co-space3.png">
 			</div>
 		</div>
-		<div class="item-container">
-			<div class="image-textbox">
+		<div class="image-overlay">
+			<div class="overlay-textbox">
 				<h3 class="text-secondary bold">Who are we?</h3>
 				<p class="bold">
 					USNStart is a modern co-working facility situated in the main building of USN Bø Campus. 
@@ -130,7 +113,7 @@
 					The facility offers an expansive 500-square-meter collaborative environment segmented into distinct zones.
 				</p>
 			</div>
-			<div class="image-textbox" id="our-offer">
+			<div class="overlay-textbox" id="our-offer">
 				<h3 class="text-secondary bold">What can we offer you?</h3>
 				<ul class="bold">
 					<li>Open Workspace</li>
@@ -143,8 +126,8 @@
 					<li>Printing and Scanning area</li>
 				</ul>
 			</div>
-			<img class="index-image" src="images/co-space2.png">
 		</div>
+		<div class="overlay-mobile-img"></div>
 		<div class="member-options-container">
 			<div id="pass" class="member-container">
 				<div class="member-item">
@@ -207,6 +190,6 @@
 
 		  </div>
 		<script src="script.js"></script>
-		<script src="slides.js"></script>
+		<script src="autoSlides.js"></script>
 	</body>
 </html>
