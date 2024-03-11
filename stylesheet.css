@@ -477,6 +477,18 @@ path {
     transform: rotate(180deg);
 }
 
+@media screen and (max-width: 460px) {
+    .footer {
+        justify-content: center;
+    }
+    .footer-contacts {
+        display: none;
+    }
+    .footer-links {
+        display: none;
+    }
+}
+
 /* Image overlay with one or two text boxes */
 
 .image-overlay {
@@ -603,6 +615,16 @@ path {
         height: 400px;
     }
 }
+
+@media (max-width: 460px) {
+    .autoSlider{
+        height: 400px;
+    }
+
+    .autoSlides img {
+        height: 400px;
+    }
+}
   
   .fade {
     animation-name: fade;
@@ -685,6 +707,32 @@ path {
     margin-top: 0px;
 }
 
+.mobile-alt {
+    display: none;
+}
+
+@media (max-width: 460px) {
+    .mobile-alt {
+        display: block;
+    }
+
+    .laptop {
+        display: none;
+    }
+
+    .headline-text {
+        position: relative;
+        margin: 0;
+        margin-top: 70px;
+    }
+
+    #index-image-overlay {
+        background-image: none;
+    }
+}
+
+
+
 
 
 /* About us specific */
@@ -713,7 +761,6 @@ path {
 
 .features h3 {
     text-align: center;
-    color: var(--primary);
 }
 
 .features p {
@@ -733,6 +780,23 @@ path {
 .floor-plan-img {
     width: 600px;
     object-fit: contain;
+}
+
+@media (max-width: 840px) {
+    .features {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .features img {
+        width: 100%;
+    }
+
+    .floor-plan-img{
+        width: 100vw;
+    }
 }
 
 
@@ -771,6 +835,9 @@ path {
 }
 
 @media (max-width: 460px) {
+    .location-text {
+        width: 95%;
+    }
     .transport-item {
         width: 95%;
         margin: 0;
