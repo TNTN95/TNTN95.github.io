@@ -57,6 +57,10 @@ a {
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
 /* Shortcuts and Buttons */
 
 button:hover{
@@ -434,49 +438,44 @@ path {
 /* Footer */
 
 .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 150px;
-    width: 100vw;
+    width: 100%;
     margin-top: 50px;
     background-color: var(--white);
+    color: var(--primary)
 }
 
+.footer li {
+    list-style: none;
+    cursor: default;
+    margin: 20px 20px 20px 0;
+}
 
+.footer a:hover {
+    cursor: pointer;
+}
 
-/* Hidden info-container */
+.footer-center {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+}
 
-    .info-box-container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 70%;
-        margin: auto;
-    }
+.footer-bottom {
+    margin-top: 30px;
+}
 
-    .info-box{
-        width: 225px;
-    }
+.footer-center p{
+    margin: 0;
+}
 
-    .info-box .shortcut{
-        width: 225px;
-        height: 50px;
-    }
-
-    #nr1, #nr2, #nr3, #nr4, #nr5, #nr6, #nr7, #nr8  {
-        display: none;
-    }
-
-    @media screen and (max-width: 1500px) {
-        .info-box-container {
-            width: 600px;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .info-box-container {
-            width: 100%;
-        }
-    }
-
+#top-arrow {
+    transform: rotate(180deg);
+}
 
 /* Image overlay with one or two text boxes */
 
@@ -496,10 +495,11 @@ path {
     display: inline-block;
     vertical-align: middle;
     background-color: var(--background);
+    background-color: var(--background-opacity);
+    border: solid 2px var(--black);
     width: 400px;
     padding: 30px;
     margin: 0 50px;
-    background-color: var(--background-opacity);
 }
 
 .overlay-mobile-img {
@@ -514,6 +514,7 @@ path {
         width: 100vw;
         margin: 0;
         padding: 10px;
+        border: none;
     }
 
     .overlay-mobile-img {
@@ -745,6 +746,11 @@ path {
 
 .location-container a:hover {
     text-decoration: underline var(--white);
+}
+
+.location-text{
+    margin: 0 auto;
+    width: 70%;
 }
 
 .transport-container {
