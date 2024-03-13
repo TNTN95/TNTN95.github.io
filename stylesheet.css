@@ -1,5 +1,5 @@
 :root {
-    --primary: #156D1F;
+    --primary: #185e20;
     --primary-dark: #142B17;
     --secondary: #CE7B2E;
     --secondary-dark: #995b22;
@@ -237,7 +237,7 @@ form{
   }
 
   #login-btn span {
-    color: var(--primary);
+    color: var(--white);
   }
   
   .login-popup {
@@ -246,6 +246,7 @@ form{
     top: 70px;
     right: 0;
     width: 440px;
+    z-index: 900;
   }
   
   .popup-content {
@@ -292,7 +293,7 @@ form{
 }
   
 .logo-text{
-    color: var(--primary);
+    color: var(--white);
     display: inline-block;
     margin: 0px;
     padding: 0px;
@@ -302,7 +303,7 @@ form{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--white);
+    background-color: var(--primary);
     height: 70px;
     width: 100%;
     position: fixed;
@@ -312,7 +313,7 @@ form{
 }
 
 .navbar a {
-    color: var(--black);
+    color: var(--white);
     font-size: 20px;
     padding: 20px 15px;
     transition: box-shadow 0.2s;
@@ -336,7 +337,7 @@ form{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--white);
+    background-color: var(--primary);
     z-index: 1;
     width: 100%;
     margin-top: 0;
@@ -362,7 +363,7 @@ path {
 }
 
 .mobile-menu a{
-    color: var(--primary);
+    color: var(--white);
 }
 
 .mobile-menu a:hover{
@@ -444,8 +445,8 @@ path {
     height: 150px;
     width: 100%;
     margin-top: 50px;
-    background-color: var(--white);
-    color: var(--primary)
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 .footer li {
