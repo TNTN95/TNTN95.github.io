@@ -1,6 +1,7 @@
 :root {
     --primary: #185e20;
     --primary-dark: #142B17;
+    --primary-light: #BDCCB7;
     --secondary: #CE7B2E;
     --secondary-dark: #995b22;
     --background: #E7E3DD;
@@ -41,6 +42,10 @@ a {
     text-decoration: none;
 }
 
+.link {
+    color: var(--secondary);
+}
+
 .text-primary {
     color: var(--primary);
 }
@@ -59,6 +64,13 @@ a {
 
 .text-right {
     text-align: right;
+}
+
+hr {
+    height:2px;
+    border-width:0;
+    background-color: var(--primary);
+    margin: 80px 0;
 }
 
 /* Shortcuts and Buttons */
@@ -680,6 +692,48 @@ path {
     background-color: #3b3b3b;
 }
 
+/* Text on half covered image */
+
+.half-info-container{
+    background-image: url("images/co-space2.png");
+    width: 100%;
+    height: 600px;
+}
+
+.half-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background);
+    opacity: 90%;
+    width: 50%;
+    height: 100%;
+}
+
+.mobile-image{
+    display: none;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .half-text-container{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 460px) {
+    .half-text-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-image{
+        display: block;
+    }
+}
+
 
 
 /* Keeps content below navbar */
@@ -764,14 +818,6 @@ path {
     text-align: center;
 }
 
-.features p {
-    color: var(--primary);
-}
-
-.features a {
-    color: var(--secondary);
-}
-
 #floor-plan {
     display: flex;
     justify-content: center;
@@ -845,6 +891,37 @@ path {
     }
 }
 
+@media (max-width: 900px) {
+    .half-text-aboutUs{
+        width: 100%;
+        height: 70%;
+    }
+
+    .half-text-aboutUs p{
+        min-width: 550px;
+    }
+}
+
+.half-text-aboutUs p{
+    padding: 0 20px;
+    margin: 10px;
+}
+
+.half-text-aboutUs h2{
+    padding: 0 20px;
+    margin: 10px;
+}
+
+.privacy-container{
+    margin: 50px 0;
+}
+
+.privacy-text{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+}
+
 
 
 /*Membership specific */
@@ -879,8 +956,8 @@ path {
   }
   
   .member-item {
-    background-color: var(--background);
-    padding: 10px;
+    background-color: var(--white);
+    padding: 0;
     border-radius: 3px;
     box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
   }
@@ -891,34 +968,31 @@ path {
   
   .member-item p{
     margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  .member-desc {
+    height: 30px;
   }
   
   .member-image {
     display: block;
     object-fit: cover;  
     width: 100%;
-    max-height: 100px;
-    margin: 0 auto;
+    max-height: 176px;
+    margin: 0;
+  }
+
+  .member-item button {
+    margin: 10px;
   }
 
 
 
 /* Contact page specific only */
 
-.contact-info-container{
-    background-image: url("images/co-space2.png");
-    width: 100%;
-    height: 600px;
-}
-
-.contact-text-container{
-    display: flex;
-    flex-direction: column;
+.half-text-contact{
     justify-content: space-around;
-    background-color: var(--background);
-    opacity: 90%;
-    width: 50%;
-    height: 100%;
 }
 
 .contact-text{
@@ -932,25 +1006,7 @@ path {
     text-decoration: underline var(--primary);
 }
 
-.mobile-image{
-    display: none;
-    object-fit: cover;
-    width: 100%;
-}
-
-@media (max-width: 800px) {
-    .contact-text-container{
-        width: 100%;
-        height: 50%;
-    }
-}
-
 @media (max-width: 460px) {
-    .contact-text-container{
-        width: 100%;
-        height: 100%;
-    }
-
     .contact-text h1{
         display: none;
     }
@@ -958,11 +1014,6 @@ path {
     .contact-text{
         display: block;
     }
-
-    .mobile-image{
-        display: block;
-    }
-
 }
 
 .item-container{
