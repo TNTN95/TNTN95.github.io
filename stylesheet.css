@@ -4,6 +4,7 @@
     --primary-light: #BDCCB7;
     --secondary: #CE7B2E;
     --secondary-dark: #995b22;
+    --secondary-background: #E0C4A9;
     --background: #E7E3DD;
     --background-opacity: #e7e3ddd7;
     --white: #FFFFFF;
@@ -240,6 +241,18 @@ form{
     position: absolute;
     width: 20px;
     height: 20px;
+  }
+
+  #signup{
+    width: 50%;
+    min-width: 500px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 460px) {
+    #signup {
+        width: 100%;
+    }
   }
   
   /* Login (Also uses sign-up form classes) */
@@ -698,6 +711,7 @@ path {
     background-image: url("images/co-space2.png");
     width: 100%;
     height: 600px;
+    position: relative;
 }
 
 .half-text-container{
@@ -708,6 +722,22 @@ path {
     opacity: 90%;
     width: 50%;
     height: 100%;
+}
+
+.half-text-container p{
+    padding: 0 20px;
+    margin: 10px;
+}
+
+.half-text-container h2{
+    padding: 0 20px;
+    margin: 10px;
+}
+
+.container-right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 .mobile-image{
@@ -733,6 +763,42 @@ path {
         display: block;
     }
 }
+
+/* Text Box */
+
+.text-box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.text-box {
+    background-color: var(--secondary-background);
+    padding: 10px;
+    margin: 10px;
+    width: 40%;
+    min-width: 300px;
+}
+
+.text-box p, h3{
+    padding: 5px 10px;
+}
+
+@media (max-width: 800px) {
+    .text-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 460px) {
+    .text-box {
+        width: 100%;
+        margin: 0;
+    }
+}
+
 
 
 
@@ -902,16 +968,6 @@ path {
     }
 }
 
-.half-text-aboutUs p{
-    padding: 0 20px;
-    margin: 10px;
-}
-
-.half-text-aboutUs h2{
-    padding: 0 20px;
-    margin: 10px;
-}
-
 .privacy-container{
     margin: 50px 0;
 }
@@ -986,6 +1042,14 @@ path {
   .member-item button {
     margin: 10px;
   }
+
+  input[type="date"]{
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--background);
+  }
+
 
 
 
