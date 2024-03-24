@@ -115,15 +115,93 @@
 			</div>
 			<hr id="book-a-space">
 			<h2 class="center">Book a Space</h2>
-			<div id="floor-plan">
-				<img id="floor-plan" src="images/floor-plan.jpg" style="mix-blend-mode: multiply;">
+			<div class="booking-container">
+				<div class="selector">
+					<form>
+						<p class="bold">Date of booking:</p>
+						<input type="date" name="dateofbirth" id="datepicker">
+						<br>
+						<p class="bold">Your selection:</p>
+						<input id="selected" type="text" name="selection" placeholder="Make your choice" readonly>
+						<input type="submit" value="Confirm booking" class="button button-dark btn-sec-dark">
+					</form>
+				</div>
+				<div>
+				  <div class="floor-plan">
+					<div class="section1">
+					  <div class="section1-1">
+						<div></div>
+						<div class="section1-1-1">
+						  <div></div>
+						  <div class="section1-1-1-1">
+							<div class="seat" id="1" onclick="booking(1)"></div>
+							<div class="seat" id="2" onclick="booking(2)"></div>
+							<div class="seat" id="3" onclick="booking(3)"></div>
+							<div class="seat" id="4" onclick="booking(4)"></div>
+						  </div>
+						  <div></div>
+						</div>
+						<div class="section1-1-2">
+						  <div></div>
+						  <div class="section1-1-2-1">
+							<div class="seat" id="5" onclick="booking(5)"></div>
+							<div class="seat" id="6" onclick="booking(6)"></div>
+							<div class="seat" id="7" onclick="booking(7)"></div>
+							<div class="seat" id="8" onclick="booking(8)"></div>
+							<div class="seat" id="9" onclick="booking(9)"></div>
+							<div class="seat" id="10" onclick="booking(10)"></div>
+							<div class="seat" id="11" onclick="booking(11)"></div>
+							<div class="seat" id="12" onclick="booking(12)"></div>
+							<div class="seat" id="13" onclick="booking(13)"></div>
+							<div class="seat" id="14" onclick="booking(14)"></div>
+							<div class="seat" id="15" onclick="booking(15)"></div>
+							<div class="seat" id="16" onclick="booking(16)"></div>
+						  </div>
+						  <div></div>
+						</div>
+						<div class="section1-1-3">
+						  <div></div>
+						  <div class="section1-1-3-1">
+							<div class="seat" id="17" onclick="booking(17)"></div>
+							<div class="seat" id="18" onclick="booking(18)"></div>
+							<div class="seat" id="19" onclick="booking(19)"></div>
+							<div class="seat" id="20" onclick="booking(20)"></div>
+						  </div>
+						  <div></div>
+						</div>
+					  </div>
+					  <div class="section1-2">
+						<div class="section1-2-1">
+						  <div></div>
+						  <div class="office" id="21" onclick="booking(21)"></div>
+						  <div class="office" id="22" onclick="booking(22)"></div>
+						</div>
+						<div></div>
+						<div class="section1-2-2">
+						  <div></div>
+						  <div class="office" id="23" onclick="booking(23)"></div>
+						  <div class="office" id="24" onclick="booking(24)"></div>
+						  <div class="office" id="25" onclick="booking(25)"></div>
+						  <div class="office" id="26" onclick="booking(26)"></div>
+						</div>
+						<div></div>
+					  </div>
+					</div>
+					<div class="section2">
+					  <div></div>
+					  <div class="meeting-room" id="27" onclick="booking(27)"></div>
+					  <div class="meeting-room" id="28" onclick="booking(28)"></div>
+					  <div class="meeting-room" id="29" onclick="booking(29)"></div>
+					  <div class="meeting-room" id="30" onclick="booking(30)"></div>
+					  <div></div>
+					  <div class="meeting-room" id="31" onclick="booking(31)"></div>
+					  <div class="meeting-room" id="32" onclick="booking(32)"></div>
+					  <div></div>
+					</div>
+				  </div>
+				</div>
+			  </div>
 			</div>
-			<p>Date of booking:</p>
-			<input type="date" name="dateofbirth">
-			<br>
-			<p>Your selection:</p>
-			<p>Make your choice</p>
-			<input type="hidden" name="selection" value="" readonly>
 			<hr id="perks-of-membership">
 			<div class="half-info-container">
                 <div class="half-text-container">
@@ -233,5 +311,6 @@
 			</div>
 		</div>
 		<script src="script.js"></script>
+		<script src="booking.js"></script>
 	</body>
 </html>
