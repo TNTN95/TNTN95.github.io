@@ -71,8 +71,14 @@ hr {
     height:2px;
     border-width:0;
     background-color: var(--primary);
-    margin: 80px 0;
+    margin: 50px 0;
 }
+
+@media screen and (max-width: 460px) {
+    hr {
+        background-color: var(--background);
+    }
+ }
 
 /* Shortcuts and Buttons */
 
@@ -372,7 +378,7 @@ form{
 
 .dropdown-content a {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     padding: 10px;
 }
 
@@ -546,9 +552,14 @@ path {
     background-image: url("images/co-space2.png");
     width: 100%;
     height: 400px;
+    margin-top: 30px;
 }
 
 @media (max-width: 460px) {
+    .image-overlay {
+        height: 80%;
+    }
+
     .overlay-textbox {
         width: 100vw;
         margin: 0;
@@ -796,7 +807,7 @@ path {
 @media (max-width: 460px) {
     .text-box {
         width: 100%;
-        margin: 0;
+        margin: 20px 0;
     }
 }
 
@@ -885,7 +896,7 @@ path {
     text-align: center;
 }
 
-#floor-plan {
+.floor-plan-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -909,10 +920,13 @@ path {
     }
 
     .floor-plan-img{
-        width: 100vw;
+        width: 90vw;
     }
 }
 
+.map {
+    margin: 50px 0;
+}
 
 .location-container {
     margin: 30px 0;
@@ -935,6 +949,7 @@ path {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .transport-item {
@@ -946,6 +961,11 @@ path {
 .transport-container .image-text-container{
     height: 600px;
     margin-bottom: 20px;
+}
+
+.about-us-mobile {
+    display: none;
+    padding: 10px;
 }
 
 @media (max-width: 460px) {
@@ -969,6 +989,16 @@ path {
     }
 }
 
+@media (max-width: 460px) {
+    .about-us-container{
+        display: none;
+    }
+
+    .about-us-mobile {
+        display: block;
+    }
+}
+
 .privacy-container{
     margin: 50px 0;
 }
@@ -979,16 +1009,30 @@ path {
     gap: 20px;
 }
 
+@media (max-width: 460px) {
+    .privacy-text{
+        display: block;
+    }
+
+    .privacy-text p{
+        padding: 10px 5px;
+    }
+}
+
 
 
 /*Membership specific */
 
 /* Membership Options */
 
+.member-option-text {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
 .member-options-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
   }
   
   .member-container {
@@ -1001,6 +1045,8 @@ path {
     .member-container {
         display: flex;
         flex-wrap: wrap;
+        width: 90vw;
+        margin: 20px auto;
     }
 }
   
@@ -1131,6 +1177,8 @@ path {
     }
 }
 
+/* Booking */
+
 .booking-container {
     display: flex;
     justify-content: center;
@@ -1147,6 +1195,11 @@ path {
     text-align: center;
     border: none;
     font-size: 24px;
+}
+
+.selector p {
+    max-width: 450px;
+    margin: 30px auto;
 }
 
 .floor-plan{
