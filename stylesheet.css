@@ -126,7 +126,7 @@ button:hover{
 .button-light {
     background-color: var(--background);
     color: var(--primary);
-    border: 2px solid var(--primary);
+    border: 3px solid var(--primary);
 }
 
 .button-light:hover {
@@ -145,7 +145,8 @@ button:hover{
 }
 
 .btn-sec-light {
-    border: 2px solid var(--secondary);
+    border: 3px solid var(--secondary);
+    background-color: var(--white);
 }
 
 .btn-sec-light:hover {
