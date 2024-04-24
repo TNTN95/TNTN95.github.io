@@ -2,7 +2,7 @@
     --primary: #185e20;
     --primary-dark: #142B17;
     --primary-light: #BDCCB7;
-    --secondary: #CE7B2E;
+    --secondary: #D48740;
     --secondary-dark: #995b22;
     --secondary-background: #E0C4A9;
     --background: #E7E3DD;
@@ -44,7 +44,7 @@ a {
 }
 
 .link {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .text-primary {
@@ -93,6 +93,7 @@ button:hover{
     padding: 12.5px;
     gap: 10px;
     border: none;
+    font-weight: bold;
 }
 
 .shortcut {
@@ -124,7 +125,7 @@ button:hover{
 
 .button-light {
     background-color: var(--background);
-    color: var(--black);
+    color: var(--primary);
     border: 2px solid var(--primary);
 }
 
@@ -136,6 +137,7 @@ button:hover{
 
 .btn-sec-dark {
     background-color: var(--secondary);
+    color: var(--black);
 }
 
 .btn-sec-dark:hover {
@@ -761,7 +763,7 @@ path {
 @media (max-width: 800px) {
     .half-text-container{
         width: 100%;
-        height: 50%;
+        height: 60%;
     }
 }
 
